@@ -1,7 +1,6 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Gamepad2, Menu, X } from "lucide-react";
+import { Gamepad2, Menu, X, Package } from "lucide-react";
 import { useCollectibles } from "../../hooks/use-collectibles";
 
 const Header: React.FC = () => {
@@ -29,6 +28,9 @@ const Header: React.FC = () => {
           </Link>
           <Link to="/collectibles" className="nav-link text-retro-light text-lg hover:text-retro-primary transition-colors">
             Collectibles
+          </Link>
+          <Link to="/inventory" className="nav-link text-retro-light text-lg hover:text-retro-primary transition-colors">
+            Inventory
           </Link>
           <Link to="/trivia" className="nav-link text-retro-light text-lg hover:text-retro-primary transition-colors">
             Trivia
@@ -79,6 +81,13 @@ const Header: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               Collectibles
+            </Link>
+            <Link 
+              to="/inventory" 
+              className="py-3 text-retro-light text-lg hover:text-retro-primary border-b border-retro-secondary"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Inventory
             </Link>
             <Link 
               to="/trivia" 

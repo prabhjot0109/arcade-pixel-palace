@@ -54,8 +54,10 @@ const initialAchievements: Achievement[] = [
 
 interface AchievementsContextType {
   achievements: Achievement[];
+  unlockedCount: number;
   checkAchievements: () => void;
   getProgress: (achievementId: string) => number;
+  resetAchievements: () => void;
 }
 
 const AchievementsContext = createContext<AchievementsContextType | undefined>(undefined);
@@ -67,6 +69,9 @@ export const AchievementsProvider: React.FC<{ children: React.ReactNode }> = ({ 
   });
 
   const { collectedCount } = useCollectibles();
+  
+  // Calculate number of unlocked achievements
+  const unlockedCount = achievements.filter(achievement => achievement.unlocked).length;
 
   const getProgress = (achievementId: string) => {
     const achievement = achievements.find(a => a.id === achievementId);
@@ -115,8 +120,23 @@ export const AchievementsProvider: React.FC<{ children: React.ReactNode }> = ({ 
     checkAchievements();
   }, [collectedCount]);
 
+  const resetAchievements = () => {
+    setAchievements(initialAchievements);
+    toast.info("All achievements have been reset", {
+      description: "Your achievements have been reset to their initial state."
+    });
+  };
+
   return (
-    <AchievementsContext.Provider value={{ achievements, checkAchievements, getProgress }}>
+    <AchievementsContext.Provider 
+      value={{ 
+        achievements, 
+        unlockedCount,
+        checkAchievements, 
+        getProgress,
+        resetAchievements
+      }}
+    >
       {children}
     </AchievementsContext.Provider>
   );

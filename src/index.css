@@ -87,6 +87,54 @@
 }
 
 @layer base {
+  :root[data-theme="retro-arcade"] {
+    --retro-primary: #ff004d;
+    --retro-secondary: #29adff;
+    --retro-accent: #00e756;
+    --retro-light: #ffffff;
+    --retro-dark: #1d2b53;
+    --retro-gray: #5f574f;
+    --retro-blue: #29adff;
+    --retro-red: #ff004d;
+    --retro-danger: #ff2a6d;
+  }
+  
+  :root[data-theme="neon-wave"] {
+    --retro-primary: #ff00ff;
+    --retro-secondary: #00ffff;
+    --retro-accent: #ff2a6d;
+    --retro-light: #ffffff;
+    --retro-dark: #120458;
+    --retro-gray: #7b6d8d;
+    --retro-blue: #05d9e8;
+    --retro-red: #ff2a6d;
+    --retro-danger: #ff2a6d;
+  }
+  
+  :root[data-theme="pixel-forest"] {
+    --retro-primary: #40c9a2;
+    --retro-secondary: #2a7f62;
+    --retro-accent: #8bd7d2;
+    --retro-light: #e9f7ca;
+    --retro-dark: #1e3329;
+    --retro-gray: #778770;
+    --retro-blue: #8bd7d2;
+    --retro-red: #e55812;
+    --retro-danger: #e55812;
+  }
+  
+  :root[data-theme="cyber-punk"] {
+    --retro-primary: #f72585;
+    --retro-secondary: #4361ee;
+    --retro-accent: #4cc9f0;
+    --retro-light: #ffffff;
+    --retro-dark: #10002b;
+    --retro-gray: #6c757d;
+    --retro-blue: #4cc9f0;
+    --retro-red: #f72585;
+    --retro-danger: #f72585;
+  }
+  
   * {
     @apply border-border;
     image-rendering: pixelated;
@@ -94,6 +142,7 @@
 
   body {
     @apply bg-retro-dark text-retro-light;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   }
   
   h1, h2, h3 {
@@ -122,6 +171,19 @@
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
     z-index: 10;
+  }
+  
+  /* Theme-specific animations */
+  :root[data-theme="neon-wave"] .crt::before {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 255, 0.08), rgba(0, 255, 255, 0.04), rgba(255, 42, 109, 0.08));
+  }
+  
+  :root[data-theme="pixel-forest"] .crt::before {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(64, 201, 162, 0.06), rgba(233, 247, 202, 0.02), rgba(42, 127, 98, 0.06));
+  }
+  
+  :root[data-theme="cyber-punk"] .crt::before {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(247, 37, 133, 0.08), rgba(67, 97, 238, 0.04), rgba(76, 201, 240, 0.08));
   }
   
   .crt::after {
@@ -194,5 +256,46 @@
   
   .collected-item {
     @apply bg-retro-primary bg-opacity-20 rounded p-2 flex items-center gap-2 text-sm animate-item-reveal;
+  }
+  
+  /* Page transition animations */
+  @keyframes pixel-fade-in {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes pixel-slide-up {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes pixel-slide-right {
+    0% { transform: translateX(-20px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  .page-transition-enter {
+    animation: pixel-fade-in 0.3s ease-out forwards;
+  }
+  
+  .page-transition-exit {
+    animation: pixel-fade-in 0.3s ease-in reverse forwards;
+  }
+  
+  /* Theme-specific styles */
+  :root[data-theme="retro-arcade"] .nav-link:hover {
+    text-shadow: 0 0 8px var(--retro-primary);
+  }
+  
+  :root[data-theme="neon-wave"] .nav-link:hover {
+    text-shadow: 0 0 12px var(--retro-primary), 0 0 24px var(--retro-primary);
+  }
+  
+  :root[data-theme="pixel-forest"] .nav-link:hover {
+    text-shadow: 0 0 8px var(--retro-accent);
+  }
+  
+  :root[data-theme="cyber-punk"] .nav-link:hover {
+    text-shadow: 0 0 12px var(--retro-primary), 0 0 24px var(--retro-secondary);
   }
 }

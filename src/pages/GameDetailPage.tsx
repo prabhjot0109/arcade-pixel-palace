@@ -149,9 +149,29 @@ const GameDetailPage = () => {
               alt={game.title} 
               className="w-full h-[300px] object-cover"
             />
+            {/* Primary collectible */}
             {game.collectibleId && (
               <div className="absolute bottom-4 right-4">
                 <CollectibleItem id={game.collectibleId} size="lg" />
+              </div>
+            )}
+            
+            {/* Additional collectible based on the game's genre */}
+            {game.genre === 'RPG' && (
+              <div className="absolute top-4 left-4">
+                <CollectibleItem id="scroll" size="md" />
+              </div>
+            )}
+            
+            {game.genre === 'Platformer' && (
+              <div className="absolute top-4 right-4">
+                <CollectibleItem id="1up" size="md" />
+              </div>
+            )}
+            
+            {game.genre === 'Arcade' && (
+              <div className="absolute top-4 left-4">
+                <CollectibleItem id="ghost" size="md" />
               </div>
             )}
           </div>
@@ -175,8 +195,12 @@ const GameDetailPage = () => {
             <p className="text-xl text-retro-light">{game.description}</p>
             
             {game.easterEgg && (
-              <div className="mt-6 p-4 bg-retro-secondary bg-opacity-20 rounded-lg border-2 border-retro-secondary animate-bounce">
+              <div className="mt-6 p-4 bg-retro-secondary bg-opacity-20 rounded-lg border-2 border-retro-secondary relative">
                 <p className="text-lg text-retro-light">🎮 {game.easterEgg}</p>
+                {/* Easter egg collectible */}
+                <div className="absolute -top-4 -right-4">
+                  <CollectibleItem id="map" size="sm" />
+                </div>
               </div>
             )}
           </div>
@@ -185,7 +209,7 @@ const GameDetailPage = () => {
         <PixelDivider text="GAMEPLAY" />
         
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-retro-dark border-4 border-retro-secondary p-6 rounded-lg">
+          <div className="bg-retro-dark border-4 border-retro-secondary p-6 rounded-lg relative">
             <h2 className="text-2xl text-retro-primary mb-4">CONTROLS</h2>
             <ul className="space-y-2 text-xl text-retro-light">
               <li>D-Pad: Move</li>
@@ -193,12 +217,22 @@ const GameDetailPage = () => {
               <li>B Button: Run/Cancel</li>
               <li>Start: Pause Game</li>
             </ul>
+            
+            {/* Controller collectible */}
+            <div className="absolute -bottom-3 right-3">
+              <CollectibleItem id="snes" size="sm" />
+            </div>
           </div>
           
-          <div className="bg-retro-dark border-4 border-retro-secondary p-6 rounded-lg">
+          <div className="bg-retro-dark border-4 border-retro-secondary p-6 rounded-lg relative">
             <h2 className="text-2xl text-retro-primary mb-4">TIPS & TRICKS</h2>
             <ul className="space-y-2 text-xl text-retro-light">
               <li>Hold B while running to move faster</li>
+              
+              {/* Collectible in the tips section */}
+              <div className="absolute top-2 right-2">
+                <CollectibleItem id="key" size="sm" />
+              </div>
               <li>Jump on enemies to defeat them</li>
               <li>Collect coins for extra lives</li>
               <li>Find hidden blocks for power-ups</li>

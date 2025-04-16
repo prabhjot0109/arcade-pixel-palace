@@ -36,11 +36,15 @@ const Index = () => {
           </div>
           
           <div className="mt-14 w-full relative">
-            <div className="absolute -top-10 left-1/4 opacity-80">
+            {/* Strategic collectible placement throughout the hero section */}
+            <div className="absolute -top-10 left-1/4">
               <CollectibleItem id="mushroom" />
             </div>
-            <div className="absolute -top-16 right-1/4 opacity-80">
-              <CollectibleItem id="coin" />
+            <div className="absolute top-0 right-8">
+              <CollectibleItem id="ring" />
+            </div>
+            <div className="absolute -bottom-8 left-10">
+              <CollectibleItem id="gold-coin" size="sm" />
             </div>
           </div>
         </div>
@@ -48,7 +52,12 @@ const Index = () => {
 
       <PixelDivider text="FEATURED GAMES" />
       
-      <section className="mb-12">
+      <section className="mb-12 relative">
+        {/* Rare collectible near featured games section */}
+        <div className="absolute top-2 right-10 z-10">
+          <CollectibleItem id="fire-flower" />
+        </div>
+        
         <FeaturedGame 
           title="Super Mario Bros."
           description="Jump and run through the Mushroom Kingdom in this iconic platformer. 
@@ -69,8 +78,13 @@ const Index = () => {
 
       <PixelDivider text="CLASSIC GAMES" />
       
-      <section className="mb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="mb-12 relative">
+        {/* Epic collectible in the corner of the classics section */}
+        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <CollectibleItem id="gem" size="md" />
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           <GameCard 
             title="Pac-Man"
             year="1980"

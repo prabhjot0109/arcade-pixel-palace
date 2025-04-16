@@ -119,15 +119,9 @@ ${collectible.description}`;
       <span className="select-none">{collectible.icon}</span>
       
       {/* Tooltip - positioned at the right side for better visibility */}
-      {isHovering && showTooltip && (
+      {isHovering && showTooltip && !isCollected && (
         <div className="fixed z-50 ml-5 -mt-1 bg-retro-dark border-2 border-retro-primary text-retro-light p-2 rounded-md shadow-lg whitespace-nowrap text-sm pointer-events-none max-w-xs">
           <div className="font-bold">{collectible.name}</div>
-          {isCollected && (
-            <>
-              <div className="capitalize text-xs">{collectible.rarity} {collectible.category}</div>
-              {collectible.effect && <div className="text-retro-accent text-xs">{collectible.effect}</div>}
-            </>
-          )}
         </div>
       )}
     </div>

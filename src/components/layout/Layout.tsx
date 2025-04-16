@@ -19,15 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </main>
         <Footer />
       </div>
-      <Toaster position="top-center" toastOptions={{
-        style: {
-          fontFamily: "'VT323', monospace",
-          fontSize: '1.2rem',
-          background: '#1A1F2C',
-          color: '#f1f1f1',
-          border: '4px solid #9b87f5'
-        }
-      }} />
+
     </div>
   );
 };

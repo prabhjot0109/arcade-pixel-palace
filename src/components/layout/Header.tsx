@@ -33,6 +33,9 @@ const Header: React.FC = () => {
           <Link to="/trivia" className="nav-link text-retro-light text-lg hover:text-retro-primary transition-colors">
             Trivia
           </Link>
+          <Link to="/about" className="nav-link text-retro-light text-lg hover:text-retro-primary transition-colors">
+            About
+          </Link>
           <div className="ml-4 bg-retro-dark border-2 border-retro-blue px-3 py-1 rounded-md">
             <span className="text-retro-blue font-vt323 text-lg">
               {collectedCount}/{totalCollectibles} Items
@@ -79,10 +82,17 @@ const Header: React.FC = () => {
             </Link>
             <Link 
               to="/trivia" 
-              className="py-3 text-retro-light text-lg hover:text-retro-primary"
+              className="py-3 text-retro-light text-lg hover:text-retro-primary border-b border-retro-secondary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Trivia
+            </Link>
+            <Link 
+              to="/about" 
+              className="py-3 text-retro-light text-lg hover:text-retro-primary"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
             </Link>
             <div className="mt-4 mb-2 bg-retro-dark border-2 border-retro-blue px-3 py-1 rounded-md inline-block">
               <span className="text-retro-blue text-lg">

@@ -53,7 +53,7 @@ const Index = () => {
           title="Super Mario Bros."
           description="Jump and run through the Mushroom Kingdom in this iconic platformer. 
                       Rescue Princess Toadstool from the evil clutches of Bowser!"
-          imageUrl="https://source.unsplash.com/random/800x600/?mario"
+          imageUrl="https://images.unsplash.com/photo-1500673922987-e212871fec22"
           slug="super-mario-bros"
           collectibleId="mushroom"
         />
@@ -62,7 +62,7 @@ const Index = () => {
           title="The Legend of Zelda"
           description="Embark on an epic journey through the kingdom of Hyrule. Solve puzzles, 
                       explore dungeons, and defeat Ganon to rescue Princess Zelda."
-          imageUrl="https://source.unsplash.com/random/800x600/?fantasy"
+          imageUrl="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
           slug="legend-of-zelda"
         />
       </section>

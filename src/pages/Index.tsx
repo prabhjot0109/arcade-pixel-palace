@@ -7,6 +7,14 @@ import GameCard from "../components/games/GameCard";
 import PixelDivider from "../components/ui/PixelDivider";
 import CollectibleItem from "../components/collectibles/CollectibleItem";
 
+// Import game images
+import superMarioBros from "../assets/images/super-mario-bros.svg";
+import legendOfZelda from "../assets/images/legend-of-zelda.svg";
+import pacMan from "../assets/images/pac-man.svg";
+import sonic from "../assets/images/sonic.svg";
+import tetris from "../assets/images/tetris.svg";
+import streetFighter from "../assets/images/street-fighter.svg";
+
 const Index = () => {
   const [currentYear] = useState(new Date().getFullYear());
   
@@ -62,7 +70,7 @@ const Index = () => {
           title="Super Mario Bros."
           description="Jump and run through the Mushroom Kingdom in this iconic platformer. 
                       Rescue Princess Toadstool from the evil clutches of Bowser!"
-          imageUrl="/src/assets/images/super-mario-bros.svg"
+          imageUrl={superMarioBros}
           slug="super-mario-bros"
           collectibleId="mushroom"
         />
@@ -71,7 +79,7 @@ const Index = () => {
           title="The Legend of Zelda"
           description="Embark on an epic journey through the kingdom of Hyrule. Solve puzzles, 
                       explore dungeons, and defeat Ganon to rescue Princess Zelda."
-          imageUrl="/src/assets/images/legend-of-zelda.svg"
+          imageUrl={legendOfZelda}
           slug="legend-of-zelda"
         />
       </section>
@@ -89,7 +97,7 @@ const Index = () => {
             title="Pac-Man"
             year="1980"
             platform="Arcade"
-            imageUrl="/src/assets/images/pac-man.svg"
+            imageUrl={pacMan}
             slug="pac-man"
           />
           
@@ -97,7 +105,7 @@ const Index = () => {
             title="Sonic the Hedgehog"
             year="1991"
             platform="Sega Genesis"
-            imageUrl="/src/assets/images/sonic.svg"
+            imageUrl={sonic}
             slug="sonic"
           />
           
@@ -105,7 +113,7 @@ const Index = () => {
             title="Tetris"
             year="1984"
             platform="Various"
-            imageUrl="/src/assets/images/tetris.svg"
+            imageUrl={tetris}
             slug="tetris"
           />
           
@@ -113,7 +121,7 @@ const Index = () => {
             title="Street Fighter II"
             year="1991"
             platform="Arcade"
-            imageUrl="/src/assets/images/street-fighter.svg"
+            imageUrl={streetFighter}
             slug="street-fighter"
           />
         </div>

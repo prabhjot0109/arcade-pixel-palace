@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#5C94FC"/>
+  <!-- Ground -->
+  <rect y="250" width="400" height="50" fill="#8F563B"/>
+  <rect y="240" width="400" height="10" fill="#C5A06C"/>
+  <!-- Pipe -->
+  <rect x="300" y="190" width="50" height="60" fill="#00BA00"/>
+  <rect x="290" y="180" width="70" height="10" fill="#00BA00"/>
+  <!-- Blocks -->
+  <rect x="150" y="150" width="40" height="40" fill="#E39C2D"/>
+  <rect x="155" y="155" width="30" height="30" fill="#FFCC00"/>
+  <rect x="200" y="150" width="40" height="40" fill="#963C00"/>
+  <rect x="205" y="155" width="30" height="30" fill="#E5703D"/>
+  <!-- Clouds -->
+  <circle cx="60" cy="80" r="20" fill="#FFFFFF"/>
+  <circle cx="100" cy="80" r="25" fill="#FFFFFF"/>
+  <circle cx="140" cy="80" r="20" fill="#FFFFFF"/>
+  <!-- Mario -->
+  <rect x="100" y="210" width="30" height="40" fill="#E5281B"/>
+  <rect x="105" y="190" width="20" height="20" fill="#FFDEC0"/>
+  <rect x="110" y="195" width="10" height="5" fill="#000000"/>
+  <rect x="95" y="190" width="10" height="10" fill="#8F563B"/>
+  <rect x="95" y="200" width="40" height="10" fill="#8F563B"/>
+</svg>

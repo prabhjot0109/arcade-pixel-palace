@@ -6,6 +6,17 @@ import PixelDivider from "../components/ui/PixelDivider";
 import { ArrowLeft } from "lucide-react";
 import CollectibleItem from "../components/collectibles/CollectibleItem";
 
+// Import game images for consistency with GamesPage
+import superMarioBrosImage from "../assets/images/super-mario-bros.svg";
+import legendOfZeldaImage from "../assets/images/legend-of-zelda.svg";
+import sonicImage from "../assets/images/sonic.svg";
+import streetFighterImage from "../assets/images/street-fighter.svg";
+import tetrisImage from "../assets/images/tetris.svg";
+import pacManImage from "../assets/images/pac-man.svg";
+import donkeyKongImage from "../assets/images/donkey-kong.svg";
+import pokemonImage from "../assets/images/pokemon.svg";
+import finalFantasyImage from "../assets/images/final-fantasy.svg";
+
 interface GameDetail {
   title: string;
   year: number;
@@ -31,7 +42,7 @@ const GameDetailPage = () => {
       developer: 'Nintendo',
       genre: 'Platformer',
       description: 'The game that defined the platforming genre and launched a gaming icon. Jump through the Mushroom Kingdom, defeat Bowser, and save Princess Peach!',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+      image: superMarioBrosImage,
       collectibleId: 'mushroom',
       easterEgg: "Did you know? The clouds and bushes in Super Mario Bros. use the same sprite, just with different colors!"
     },
@@ -41,7 +52,7 @@ const GameDetailPage = () => {
       developer: 'Nintendo',
       genre: 'Action-Adventure',
       description: 'A revolutionary action-adventure game that pioneered non-linear gameplay. Explore Hyrule, collect items, and defeat Ganon!',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      image: legendOfZeldaImage,
       collectibleId: 'sword'
     },
     'sonic': {
@@ -50,7 +61,7 @@ const GameDetailPage = () => {
       developer: 'Sega',
       genre: 'Platformer',
       description: 'The blue blur that gave Mario a run for his money! Speed through loops, collect rings, and stop Dr. Robotnik.',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+      image: sonicImage,
       collectibleId: 'ring'
     },
     'street-fighter': {
@@ -59,7 +70,7 @@ const GameDetailPage = () => {
       developer: 'Capcom',
       genre: 'Fighting',
       description: 'The fighting game that defined a genre. Choose from 8 unique fighters and compete in the World Warrior tournament!',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      image: streetFighterImage,
       collectibleId: 'fist'
     },
     'donkey-kong': {
@@ -68,7 +79,7 @@ const GameDetailPage = () => {
       developer: 'Rare',
       genre: 'Platformer',
       description: 'Stunning pre-rendered graphics and challenging platforming action. Help DK and Diddy recover their banana hoard!',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+      image: donkeyKongImage,
       collectibleId: 'banana'
     },
     'tetris': {
@@ -77,7 +88,7 @@ const GameDetailPage = () => {
       developer: 'Alexey Pajitnov',
       genre: 'Puzzle',
       description: 'The timeless puzzle game that conquered the world. Arrange falling blocks to clear lines and achieve high scores!',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      image: tetrisImage,
       collectibleId: 'block'
     },
     'pokemon': {
@@ -86,7 +97,7 @@ const GameDetailPage = () => {
       developer: 'Game Freak',
       genre: 'RPG',
       description: 'Catch, train, and battle your way to becoming a Pokémon master! A worldwide phenomenon begins.',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+      image: pokemonImage,
       collectibleId: 'pokeball'
     },
     'final-fantasy': {
@@ -95,8 +106,17 @@ const GameDetailPage = () => {
       developer: 'Square',
       genre: 'RPG',
       description: 'An epic RPG that pushed the boundaries of storytelling in games. Join Cloud and friends to save the planet!',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      image: finalFantasyImage,
       collectibleId: 'materia'
+    },
+    'pac-man': {
+      title: 'Pac-Man',
+      year: 1980,
+      developer: 'Namco',
+      genre: 'Arcade',
+      description: 'Navigate a maze, eating dots while avoiding ghosts in this iconic arcade classic that defined a generation of gaming.',
+      image: pacManImage,
+      collectibleId: 'cherry'
     }
   };
 

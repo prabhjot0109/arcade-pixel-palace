@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#78C380"/>
+  <!-- Background hills -->
+  <path d="M0,200 Q100,100 200,200 Q300,100 400,200 L400,300 L0,300 Z" fill="#55AA55"/>
+  <path d="M0,220 Q50,180 100,220 Q150,180 200,220 Q250,180 300,220 Q350,180 400,220 L400,300 L0,300 Z" fill="#338833"/>
+  <!-- Loop -->
+  <path d="M300,220 C300,180 350,180 350,220 L350,250 L300,250 Z" fill="#CC5500"/>
+  <path d="M310,220 C310,190 340,190 340,220 L340,240 L310,240 Z" fill="#78C380"/>
+  <!-- Ring -->
+  <circle cx="100" cy="150" r="15" stroke="#FFCC00" stroke-width="5" fill="none"/>
+  <circle cx="140" cy="150" r="15" stroke="#FFCC00" stroke-width="5" fill="none"/>
+  <circle cx="180" cy="150" r="15" stroke="#FFCC00" stroke-width="5" fill="none"/>
+  <!-- Sonic -->
+  <ellipse cx="240" cy="220" rx="25" ry="30" fill="#0066CC"/>
+  <ellipse cx="240" cy="200" rx="20" ry="18" fill="#0066CC"/>
+  <!-- Sonic's spikes -->
+  <path d="M240,195 L225,175 L230,195 L215,180 L225,200 L210,190 L220,205" fill="#0066CC"/>
+  <path d="M240,195 L255,175 L250,195 L265,180 L255,200 L270,190 L260,205" fill="#0066CC"/>
+  <!-- Sonic's face -->
+  <ellipse cx="240" cy="200" rx="15" ry="12" fill="#FFD6B5"/>
+  <ellipse cx="232" cy="197" rx="2" ry="3" fill="#000000"/>
+  <ellipse cx="248" cy="197" rx="2" ry="3" fill="#000000"/>
+  <path d="M235,205 Q240,208 245,205" stroke="#000000" stroke-width="1" fill="none"/>
+  <!-- Sonic's shoes -->
+  <rect x="225" y="240" width="12" height="10" rx="3" ry="3" fill="#FF0000"/>
+  <rect x="243" y="240" width="12" height="10" rx="3" ry="3" fill="#FF0000"/>
+</svg>

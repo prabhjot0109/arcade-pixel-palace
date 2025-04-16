@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Retro arcade cabinet -->
+  <rect x="4" y="2" width="24" height="28" rx="2" fill="#252526" stroke="#9146ff" stroke-width="1.5"/>
+  <!-- Screen -->
+  <rect x="6" y="4" width="20" height="14" rx="1" fill="#1e1e3f"/>
+  <!-- Arcade character pixel art -->
+  <rect x="10" y="8" width="2" height="2" fill="#ff004d"/>
+  <rect x="12" y="8" width="2" height="2" fill="#ff004d"/>
+  <rect x="14" y="8" width="2" height="2" fill="#ff004d"/>
+  <rect x="16" y="8" width="2" height="2" fill="#ff004d"/>
+  <rect x="18" y="8" width="2" height="2" fill="#ff004d"/>
+  <rect x="20" y="8" width="2" height="2" fill="#ff004d"/>
+  <rect x="10" y="10" width="2" height="2" fill="#ff004d"/>
+  <rect x="20" y="10" width="2" height="2" fill="#ff004d"/>
+  <rect x="12" y="12" width="8" height="2" fill="#ff004d"/>
+  <!-- Controls -->
+  <circle cx="10" cy="22" r="2.5" fill="#ffec27" stroke="#f25022" stroke-width="0.5"/>
+  <circle cx="22" cy="22" r="2.5" fill="#ffec27" stroke="#f25022" stroke-width="0.5"/>
+  <rect x="14" y="21" width="4" height="2" rx="1" fill="#7fdbff"/>
+</svg>

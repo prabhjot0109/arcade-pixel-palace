@@ -53,7 +53,7 @@ const Index = () => {
           title="Super Mario Bros."
           description="Jump and run through the Mushroom Kingdom in this iconic platformer. 
                       Rescue Princess Toadstool from the evil clutches of Bowser!"
-          imageUrl="https://images.unsplash.com/photo-1500673922987-e212871fec22"
+          imageUrl="/src/assets/images/super-mario-bros.svg"
           slug="super-mario-bros"
           collectibleId="mushroom"
         />
@@ -62,7 +62,7 @@ const Index = () => {
           title="The Legend of Zelda"
           description="Embark on an epic journey through the kingdom of Hyrule. Solve puzzles, 
                       explore dungeons, and defeat Ganon to rescue Princess Zelda."
-          imageUrl="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+          imageUrl="/src/assets/images/legend-of-zelda.svg"
           slug="legend-of-zelda"
         />
       </section>
@@ -75,7 +75,7 @@ const Index = () => {
             title="Pac-Man"
             year="1980"
             platform="Arcade"
-            imageUrl="https://source.unsplash.com/random/400x300/?arcade"
+            imageUrl="/src/assets/images/pac-man.svg"
             slug="pac-man"
           />
           
@@ -83,7 +83,7 @@ const Index = () => {
             title="Sonic the Hedgehog"
             year="1991"
             platform="Sega Genesis"
-            imageUrl="https://source.unsplash.com/random/400x300/?sonic"
+            imageUrl="/src/assets/images/sonic.svg"
             slug="sonic"
           />
           
@@ -91,7 +91,7 @@ const Index = () => {
             title="Tetris"
             year="1984"
             platform="Various"
-            imageUrl="https://source.unsplash.com/random/400x300/?tetris"
+            imageUrl="/src/assets/images/tetris.svg"
             slug="tetris"
           />
           
@@ -99,7 +99,7 @@ const Index = () => {
             title="Street Fighter II"
             year="1991"
             platform="Arcade"
-            imageUrl="https://source.unsplash.com/random/400x300/?fighting"
+            imageUrl="/src/assets/images/street-fighter.svg"
             slug="street-fighter"
           />
         </div>

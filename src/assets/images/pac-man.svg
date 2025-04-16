@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#000000"/>
+  <!-- Maze pattern -->
+  <rect x="50" y="50" width="300" height="10" fill="#2121DE"/>
+  <rect x="50" y="50" width="10" height="200" fill="#2121DE"/>
+  <rect x="50" y="240" width="300" height="10" fill="#2121DE"/>
+  <rect x="340" y="50" width="10" height="200" fill="#2121DE"/>
+  <rect x="100" y="100" width="60" height="10" fill="#2121DE"/>
+  <rect x="240" y="100" width="60" height="10" fill="#2121DE"/>
+  <rect x="100" y="100" width="10" height="60" fill="#2121DE"/>
+  <rect x="100" y="190" width="60" height="10" fill="#2121DE"/>
+  <rect x="240" y="190" width="60" height="10" fill="#2121DE"/>
+  <rect x="290" y="100" width="10" height="60" fill="#2121DE"/>
+  <!-- Pac-Man -->
+  <path d="M200,150 L240,120 A50,50 0 1,0 240,180 Z" fill="#FFFF00"/>
+  <!-- Ghost -->
+  <path d="M120,150 A30,30 0 0,1 180,150 L180,190 L170,180 L160,190 L150,180 L140,190 L130,180 L120,190 Z" fill="#FF0000"/>
+  <circle cx="140" cy="140" r="6" fill="#FFFFFF"/>
+  <circle cx="160" cy="140" r="6" fill="#FFFFFF"/>
+  <circle cx="140" cy="140" r="2" fill="#000000"/>
+  <circle cx="160" cy="140" r="2" fill="#000000"/>
+  <!-- Dots -->
+  <circle cx="80" cy="80" r="4" fill="#FFFFFF"/>
+  <circle cx="120" cy="80" r="4" fill="#FFFFFF"/>
+  <circle cx="160" cy="80" r="4" fill="#FFFFFF"/>
+  <circle cx="200" cy="80" r="4" fill="#FFFFFF"/>
+  <circle cx="240" cy="80" r="4" fill="#FFFFFF"/>
+  <circle cx="280" cy="80" r="4" fill="#FFFFFF"/>
+  <circle cx="320" cy="80" r="4" fill="#FFFFFF"/>
+  <circle cx="80" cy="220" r="4" fill="#FFFFFF"/>
+  <circle cx="120" cy="220" r="4" fill="#FFFFFF"/>
+  <circle cx="160" cy="220" r="4" fill="#FFFFFF"/>
+  <circle cx="200" cy="220" r="4" fill="#FFFFFF"/>
+  <circle cx="240" cy="220" r="4" fill="#FFFFFF"/>
+  <circle cx="280" cy="220" r="4" fill="#FFFFFF"/>
+  <circle cx="320" cy="220" r="4" fill="#FFFFFF"/>
+  <!-- Power Pellets -->
+  <circle cx="80" cy="150" r="8" fill="#FFFFFF"/>
+  <circle cx="320" cy="150" r="8" fill="#FFFFFF"/>
+</svg>

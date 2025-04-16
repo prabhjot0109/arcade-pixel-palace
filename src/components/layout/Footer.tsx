@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex space-x-4">
-            <a href="#" className="text-retro-light hover:text-retro-primary">
+            <a href="https://github.com/prabhjot0109" target="_blank" rel="noopener noreferrer" className="text-retro-light hover:text-retro-primary">
               <span className="sr-only">GitHub</span>
               <Github className="h-6 w-6" />
             </a>

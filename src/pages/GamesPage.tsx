@@ -5,6 +5,17 @@ import GameCard from "../components/games/GameCard";
 import PixelDivider from "../components/ui/PixelDivider";
 import CollectibleItem from "../components/collectibles/CollectibleItem";
 
+// Import game images
+import superMarioBrosImage from "../assets/images/super-mario-bros.svg";
+import legendOfZeldaImage from "../assets/images/legend-of-zelda.svg";
+import sonicImage from "../assets/images/sonic.svg";
+import streetFighterImage from "../assets/images/street-fighter.svg";
+import tetrisImage from "../assets/images/tetris.svg";
+import pacManImage from "../assets/images/pac-man.svg";
+import donkeyKongImage from "../assets/images/donkey-kong.svg";
+import pokemonImage from "../assets/images/pokemon.svg";
+import finalFantasyImage from "../assets/images/final-fantasy.svg";
+
 const GamesPage = () => {
   useEffect(() => {
     document.title = "Games - Pixel Palace";
@@ -28,7 +39,7 @@ const GamesPage = () => {
       title: "Super Mario Bros.",
       year: "1985",
       platform: "NES",
-      imageUrl: "https://source.unsplash.com/random/400x300/?mario",
+      imageUrl: superMarioBrosImage,
       platformId: "nes"
     },
     {
@@ -36,7 +47,7 @@ const GamesPage = () => {
       title: "The Legend of Zelda",
       year: "1986",
       platform: "NES",
-      imageUrl: "https://source.unsplash.com/random/400x300/?fantasy",
+      imageUrl: legendOfZeldaImage,
       platformId: "nes"
     },
     {
@@ -44,7 +55,7 @@ const GamesPage = () => {
       title: "Sonic the Hedgehog",
       year: "1991",
       platform: "Genesis",
-      imageUrl: "https://source.unsplash.com/random/400x300/?sonic",
+      imageUrl: sonicImage,
       platformId: "genesis"
     },
     {
@@ -52,7 +63,7 @@ const GamesPage = () => {
       title: "Street Fighter II",
       year: "1991",
       platform: "Arcade",
-      imageUrl: "https://source.unsplash.com/random/400x300/?fighting",
+      imageUrl: streetFighterImage,
       platformId: "arcade"
     },
     {
@@ -60,7 +71,7 @@ const GamesPage = () => {
       title: "Donkey Kong Country",
       year: "1994",
       platform: "SNES",
-      imageUrl: "https://source.unsplash.com/random/400x300/?jungle",
+      imageUrl: donkeyKongImage,
       platformId: "snes"
     },
     {
@@ -68,7 +79,7 @@ const GamesPage = () => {
       title: "Tetris",
       year: "1984",
       platform: "Various",
-      imageUrl: "https://source.unsplash.com/random/400x300/?tetris",
+      imageUrl: tetrisImage,
       platformId: "pc"
     },
     {
@@ -76,7 +87,7 @@ const GamesPage = () => {
       title: "Pokémon Red/Blue",
       year: "1996",
       platform: "Game Boy",
-      imageUrl: "https://source.unsplash.com/random/400x300/?pokemon",
+      imageUrl: pokemonImage,
       platformId: "gameboy"
     },
     {
@@ -84,8 +95,16 @@ const GamesPage = () => {
       title: "Final Fantasy VII",
       year: "1997",
       platform: "PlayStation",
-      imageUrl: "https://source.unsplash.com/random/400x300/?fantasy",
+      imageUrl: finalFantasyImage,
       platformId: "playstation"
+    },
+    {
+      id: "pac-man",
+      title: "Pac-Man",
+      year: "1980",
+      platform: "Arcade",
+      imageUrl: pacManImage,
+      platformId: "arcade"
     }
   ];
   

@@ -24,7 +24,7 @@ const initialCollectibles: CollectibleType[] = [
     name: "Power Mushroom", 
     icon: "🍄", 
     found: false, 
-    location: "home" 
+    location: "super-mario-bros" 
   },
   { 
     id: "coin", 
@@ -66,7 +66,49 @@ const initialCollectibles: CollectibleType[] = [
     name: "Master Sword", 
     icon: "🗡️", 
     found: false, 
-    location: "trivia" 
+    location: "legend-of-zelda" 
+  },
+  { 
+    id: "ring", 
+    name: "Golden Ring", 
+    icon: "⭕", 
+    found: false, 
+    location: "sonic" 
+  },
+  { 
+    id: "fist", 
+    name: "Dragon Punch", 
+    icon: "👊", 
+    found: false, 
+    location: "street-fighter" 
+  },
+  { 
+    id: "banana", 
+    name: "Golden Banana", 
+    icon: "🍌", 
+    found: false, 
+    location: "donkey-kong" 
+  },
+  { 
+    id: "block", 
+    name: "Tetris Block", 
+    icon: "⬛", 
+    found: false, 
+    location: "tetris" 
+  },
+  { 
+    id: "pokeball", 
+    name: "Poké Ball", 
+    icon: "⚪", 
+    found: false, 
+    location: "pokemon" 
+  },
+  { 
+    id: "materia", 
+    name: "Magic Materia", 
+    icon: "🔮", 
+    found: false, 
+    location: "final-fantasy" 
   },
   { 
     id: "potion", 

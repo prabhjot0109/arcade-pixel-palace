@@ -6,6 +6,17 @@ import PixelDivider from "../components/ui/PixelDivider";
 import { ArrowLeft } from "lucide-react";
 import CollectibleItem from "../components/collectibles/CollectibleItem";
 
+interface GameDetail {
+  title: string;
+  year: number;
+  developer: string;
+  genre: string;
+  description: string;
+  image: string;
+  collectibleId?: string;
+  easterEgg?: string;
+}
+
 const GameDetailPage = () => {
   const { slug } = useParams();
   
@@ -13,24 +24,79 @@ const GameDetailPage = () => {
     document.title = `${slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} - Pixel Palace`;
   }, [slug]);
 
-  // This is a mock data structure - in a real app, this would come from an API or database
-  const gameDetails = {
+  const gameDetails: Record<string, GameDetail> = {
     'super-mario-bros': {
       title: 'Super Mario Bros.',
       year: 1985,
       developer: 'Nintendo',
       genre: 'Platformer',
-      description: 'The game that defined the platforming genre and launched a gaming icon.',
+      description: 'The game that defined the platforming genre and launched a gaming icon. Jump through the Mushroom Kingdom, defeat Bowser, and save Princess Peach!',
       image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
-      collectibleId: 'mushroom'
+      collectibleId: 'mushroom',
+      easterEgg: "Did you know? The clouds and bushes in Super Mario Bros. use the same sprite, just with different colors!"
     },
     'legend-of-zelda': {
       title: 'The Legend of Zelda',
       year: 1986,
       developer: 'Nintendo',
       genre: 'Action-Adventure',
-      description: 'A revolutionary action-adventure game that pioneered non-linear gameplay.',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7'
+      description: 'A revolutionary action-adventure game that pioneered non-linear gameplay. Explore Hyrule, collect items, and defeat Ganon!',
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      collectibleId: 'sword'
+    },
+    'sonic': {
+      title: 'Sonic the Hedgehog',
+      year: 1991,
+      developer: 'Sega',
+      genre: 'Platformer',
+      description: 'The blue blur that gave Mario a run for his money! Speed through loops, collect rings, and stop Dr. Robotnik.',
+      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+      collectibleId: 'ring'
+    },
+    'street-fighter': {
+      title: 'Street Fighter II',
+      year: 1991,
+      developer: 'Capcom',
+      genre: 'Fighting',
+      description: 'The fighting game that defined a genre. Choose from 8 unique fighters and compete in the World Warrior tournament!',
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      collectibleId: 'fist'
+    },
+    'donkey-kong': {
+      title: 'Donkey Kong Country',
+      year: 1994,
+      developer: 'Rare',
+      genre: 'Platformer',
+      description: 'Stunning pre-rendered graphics and challenging platforming action. Help DK and Diddy recover their banana hoard!',
+      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+      collectibleId: 'banana'
+    },
+    'tetris': {
+      title: 'Tetris',
+      year: 1984,
+      developer: 'Alexey Pajitnov',
+      genre: 'Puzzle',
+      description: 'The timeless puzzle game that conquered the world. Arrange falling blocks to clear lines and achieve high scores!',
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      collectibleId: 'block'
+    },
+    'pokemon': {
+      title: 'Pokémon Red/Blue',
+      year: 1996,
+      developer: 'Game Freak',
+      genre: 'RPG',
+      description: 'Catch, train, and battle your way to becoming a Pokémon master! A worldwide phenomenon begins.',
+      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+      collectibleId: 'pokeball'
+    },
+    'final-fantasy': {
+      title: 'Final Fantasy VII',
+      year: 1997,
+      developer: 'Square',
+      genre: 'RPG',
+      description: 'An epic RPG that pushed the boundaries of storytelling in games. Join Cloud and friends to save the planet!',
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+      collectibleId: 'materia'
     }
   };
 
@@ -87,6 +153,12 @@ const GameDetailPage = () => {
               </div>
             </div>
             <p className="text-xl text-retro-light">{game.description}</p>
+            
+            {game.easterEgg && (
+              <div className="mt-6 p-4 bg-retro-secondary bg-opacity-20 rounded-lg border-2 border-retro-secondary animate-bounce">
+                <p className="text-lg text-retro-light">🎮 {game.easterEgg}</p>
+              </div>
+            )}
           </div>
         </div>
 
